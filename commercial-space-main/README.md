@@ -160,7 +160,7 @@ npm run dev
 ```bash
 cd backend
 mvn clean package
-java -jar target/commercial-space-backend-0.0.1-SNAPSHOT.jar
+java -jar target/*.jar
 ```
 
 **Frontend:**
@@ -255,7 +255,7 @@ npm start
    ```
 2. Run the JAR:
    ```bash
-   java -jar target/commercial-space-0.0.1-SNAPSHOT.jar
+   java -jar target/*.jar
    ```
 
 ### Frontend Deployment
