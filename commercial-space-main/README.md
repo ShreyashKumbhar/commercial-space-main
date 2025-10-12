@@ -2,6 +2,48 @@
 
 A modern commercial property rental platform built with Spring Boot backend and Next.js frontend.
 
+## 📋 Table of Contents
+- [Quick Start](#-quick-start)
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation & Setup](#-installation--setup)
+- [Running the Application](#-running-the-application)
+- [Test Credentials](#-test-credentials)
+- [Technical Stack](#-technical-stack)
+- [Deployment](#-deployment)
+- [Contributing](#-contributing)
+
+## ⚡ Quick Start
+
+Get the platform running in 3 simple steps:
+
+### 1️⃣ Setup Database
+```bash
+# Create MySQL database
+mysql -u root -p
+CREATE DATABASE commercial_space;
+exit;
+```
+
+### 2️⃣ Start Backend
+```bash
+cd backend
+mvn spring-boot:run
+# Backend will run on http://localhost:8080
+```
+
+### 3️⃣ Start Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+# Frontend will run on http://localhost:3000
+```
+
+**🎉 That's it!** Visit `http://localhost:3000` and login with test credentials below.
+
+---
+
 ## 🚀 Features
 
 ### Authentication & User Management
@@ -29,46 +71,106 @@ A modern commercial property rental platform built with Spring Boot backend and 
 - **Professional Design**: SaaS-grade interface
 - **Accessibility**: WCAG AA compliant
 
-## 🛠️ Setup Instructions
+---
 
-### Prerequisites
-- Java 17+
-- Node.js 18+
-- MySQL 8.0+
-- Maven
+## 📋 Prerequisites
 
-### Backend Setup
-1. **Database Setup**:
+Before you begin, ensure you have the following installed:
+
+- **Java 17+** - [Download](https://www.oracle.com/java/technologies/downloads/)
+- **Node.js 18+** - [Download](https://nodejs.org/)
+- **MySQL 8.0+** - [Download](https://dev.mysql.com/downloads/)
+- **Maven** - [Download](https://maven.apache.org/download.cgi)
+
+---
+
+## 🛠️ Installation & Setup
+
+### Database Configuration
+
+1. **Create Database**:
    ```sql
    CREATE DATABASE commercial_space;
-```
+   ```
 
-2. **Configure Database**:
-   Update `backend/src/main/resources/application.properties`:
+2. **Update Database Credentials** (if needed):
+   
+   Edit `backend/src/main/resources/application.properties`:
    ```properties
-   spring.datasource.username=your_username
+   spring.datasource.url=jdbc:mysql://localhost:3306/commercial_space
+   spring.datasource.username=root
    spring.datasource.password=your_password
    ```
 
-3. **Run Backend**:
-```bash
-cd backend
-   mvn spring-boot:run
-```
-   Backend will start on `http://localhost:8080`
+### Backend Setup
 
-### Frontend Setup
-1. **Install Dependencies**:
-```bash
-cd frontend
-npm install
+1. **Navigate to backend directory**:
+   ```bash
+   cd backend
    ```
 
-2. **Run Frontend**:
+2. **Install dependencies and run**:
    ```bash
+   mvn clean install
+   mvn spring-boot:run
+   ```
+   
+   ✅ Backend will start on `http://localhost:8080`
+
+### Frontend Setup
+
+1. **Navigate to frontend directory**:
+   ```bash
+   cd frontend
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**:
+   ```bash
+   npm run dev
+   ```
+   
+   ✅ Frontend will start on `http://localhost:3000`
+
+---
+
+## ▶️ Running the Application
+
+### Development Mode
+
+**Terminal 1 - Backend:**
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+**Terminal 2 - Frontend:**
+```bash
+cd frontend
 npm run dev
 ```
-   Frontend will start on `http://localhost:3000`
+
+### Production Mode
+
+**Backend:**
+```bash
+cd backend
+mvn clean package
+java -jar target/commercial-space-backend-0.0.1-SNAPSHOT.jar
+```
+
+**Frontend:**
+```bash
+cd frontend
+npm run build
+npm start
+```
+
+---
 
 ## 🧪 Test Credentials
 
