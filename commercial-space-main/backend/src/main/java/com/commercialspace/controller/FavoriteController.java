@@ -1,7 +1,6 @@
 package com.commercialspace.controller;
 
 import com.commercialspace.dto.FavoriteResponse;
-import com.commercialspace.model.Favorite;
 import com.commercialspace.service.FavoriteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
 -- Insert sample users with image_url
 INSERT INTO users (name, email, password, role, image_url) VALUES 
-('Admin User', '202301100047@mitaoe.ac.in', '$2a$10$NqKjpX.25l4.zI.C5xaiOORU5jeN2/GbmonMQMMVYyinv24WLNcXW', 'ADMIN', 'https://randomuser.me/api/portraits/men/1.jpg'),
+('Admin User', '202301100032@mitaoe.ac.in', '$2a$10$NqKjpX.25l4.zI.C5xaiOORU5jeN2/GbmonMQMMVYyinv24WLNcXW', 'ADMIN', 'https://randomuser.me/api/portraits/men/1.jpg'),
 ('Owner', 'dummy200612@gmail.com', '$2a$10$NqKjpX.25l4.zI.C5xaiOORU5jeN2/GbmonMQMMVYyinv24WLNcXW', 'OWNER', 'https://randomuser.me/api/portraits/men/2.jpg'),
-('Customer', 'rairishabh281@gmail.com', '$2a$10$NqKjpX.25l4.zI.C5xaiOORU5jeN2/GbmonMQMMVYyinv24WLNcXW', 'CUSTOMER', 'https://randomuser.me/api/portraits/women/1.jpg'),
+('Customer', 'shreyashkumbhar007@gmail.com', '$2a$10$NqKjpX.25l4.zI.C5xaiOORU5jeN2/GbmonMQMMVYyinv24WLNcXW', 'CUSTOMER', 'https://randomuser.me/api/portraits/women/1.jpg'),
 ('Mike Johnson', 'mike@example.com', '$2a$10$NqKjpX.25l4.zI.C5xaiOORU5jeN2/GbmonMQMMVYyinv24WLNcXW', 'OWNER', 'https://randomuser.me/api/portraits/men/3.jpg'),
 ('Sarah Wilson', 'sarah@example.com', '$2a$10$NqKjpX.25l4.zI.C5xaiOORU5jeN2/GbmonMQMMVYyinv24WLNcXW', 'CUSTOMER', 'https://randomuser.me/api/portraits/women/2.jpg');
 
